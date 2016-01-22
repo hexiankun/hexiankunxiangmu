@@ -62,7 +62,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     CGFloat height = [[_cellHeightArray [indexPath.row]valueForKey:@"cellHeight"]floatValue];
-    NSLog(@"height %lf",height);
+    //NSLog(@"height %lf",height);
     return height;
 }
 

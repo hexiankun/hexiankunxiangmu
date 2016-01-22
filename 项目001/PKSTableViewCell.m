@@ -61,7 +61,7 @@
     
     CGFloat imageHeight = [_heightDic[@"imageHeight"]floatValue];
     CGFloat textHeight = [_heightDic[@"textHeight"]floatValue];
-    NSLog(@"-------------%lf------------%lf",imageHeight,textHeight);
+    //NSLog(@"-------------%lf------------%lf",imageHeight,textHeight);
     if (imageHeight == 0) {
         
         _contentLabel.frame = CGRectMake(20, 70, VIEW_WIDTH-40, textHeight);

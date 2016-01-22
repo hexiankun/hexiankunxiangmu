@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-
+    [self AddBackItemBtn];
     // Do any additional setup after loading the view.
 }
 

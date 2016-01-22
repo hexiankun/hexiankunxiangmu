@@ -103,7 +103,9 @@
             [imageView setImage:[UIImage imageNamed:@"碎片"]];
             [self.navigationItem setTitleView:imageView];
     
-        UIBarButtonItem *leftBtn1 = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:(UIBarButtonSystemItemBookmarks) target:self action:@selector(leftAction1:)];
+//        UIBarButtonItem *leftBtn1 = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:(UIBarButtonSystemItemBookmarks) target:self action:@selector(leftAction1:)];
+    UIBarButtonItem* leftBtn1 = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"菜单"] style:UIBarButtonItemStyleDone target:self action:@selector(leftAction1:)];
+
     
          UIBarButtonItem* leftBtn2 = [[UIBarButtonItem alloc] initWithTitle:@"碎片" style:UIBarButtonItemStyleDone target:self action:@selector(leftAction2:)];
     
@@ -123,10 +125,12 @@
 }
 
 - (void)leftAction1:(id)sender {
+    PKLeftMenuViewController *baseVC = [[PKLeftMenuViewController alloc]init];
+    
+    [self presentViewController:baseVC animated:YES completion:nil];
     
 }
 - (void)leftAction2:(id)sender {
-   
     
 }
 

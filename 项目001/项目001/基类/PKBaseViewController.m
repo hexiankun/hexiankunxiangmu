@@ -23,11 +23,16 @@
 }
 
 - (void)AddBackItemBtn{
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithNormalIcon:@"" highlightedIcon:@"" target:self action:@selector(backView)];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithNormalIcon:@"菜单" highlightedIcon:@"菜单" target:self action:@selector(backView)];
+    
+    
+
     self.navigationItem.leftBarButtonItem = backItem;
 }
 
 - (void)backView{
+    
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 

@@ -89,6 +89,8 @@ static NSString *identigier = @"cell";
     
     
     NSDictionary *dataDic = _goodProductArray[indexPath.row];
+    // 加载网络图片的方法 （UIImageView+SDWedImage中)
+
     [cell.contentImage downloadImage:dataDic[@"coverimg"]];
      cell.contentLabel.text = dataDic[@"title"];
 
