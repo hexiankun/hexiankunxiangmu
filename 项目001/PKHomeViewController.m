@@ -16,10 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor purpleColor];
-    
+    self.view.backgroundColor = [UIColor cyanColor];
+//    [self navigationItemAction];
 
 }
+//-(void)navigationItemAction{
+//    
+//    UIBarButtonItem *leftBtn1 = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"菜单"] style:(UIBarButtonItemStyleDone) target:self action:@selector(leftBtnAction)];
+//    
+//    self.navigationItem.leftBarButtonItem = leftBtn1;
+//}
+//-(void)leftBtnAction{
+    
+  //  [self.sideMenuViewController presentLeftMenuViewController];
+    
+//}
+
+
     // Do any additional setup after loading the view.
 
 

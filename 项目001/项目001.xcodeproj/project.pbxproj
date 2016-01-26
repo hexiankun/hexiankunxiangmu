@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		042851441C50D7E0002705D0 /* PKGoodProductsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042851431C50D7E0002705D0 /* PKGoodProductsCell.m */; };
+		0428514B1C51CE51002705D0 /* PKGoodProductsInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0428514A1C51CE51002705D0 /* PKGoodProductsInfoController.m */; };
 		0437808A1C4C87600039901B /* PKloginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043780891C4C87600039901B /* PKloginViewController.m */; };
 		0437808E1C4C879C0039901B /* PKLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0437808D1C4C879C0039901B /* PKLoginView.m */; };
 		043780931C4E20750039901B /* PKFragmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043780921C4E20750039901B /* PKFragmentViewController.m */; };
@@ -132,6 +133,8 @@
 /* Begin PBXFileReference section */
 		042851421C50D7E0002705D0 /* PKGoodProductsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKGoodProductsCell.h; path = "良品/PKGoodProductsCell.h"; sourceTree = "<group>"; };
 		042851431C50D7E0002705D0 /* PKGoodProductsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKGoodProductsCell.m; path = "良品/PKGoodProductsCell.m"; sourceTree = "<group>"; };
+		042851491C51CE51002705D0 /* PKGoodProductsInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKGoodProductsInfoController.h; sourceTree = "<group>"; };
+		0428514A1C51CE51002705D0 /* PKGoodProductsInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKGoodProductsInfoController.m; sourceTree = "<group>"; };
 		043780881C4C87600039901B /* PKloginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKloginViewController.h; sourceTree = "<group>"; };
 		043780891C4C87600039901B /* PKloginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKloginViewController.m; sourceTree = "<group>"; };
 		0437808C1C4C879C0039901B /* PKLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKLoginView.h; sourceTree = "<group>"; };
@@ -387,6 +390,15 @@
 			name = cell;
 			sourceTree = "<group>";
 		};
+		042851451C51CC80002705D0 /* 良品详情 */ = {
+			isa = PBXGroup;
+			children = (
+				042851491C51CE51002705D0 /* PKGoodProductsInfoController.h */,
+				0428514A1C51CE51002705D0 /* PKGoodProductsInfoController.m */,
+			);
+			name = "良品详情";
+			sourceTree = "<group>";
+		};
 		043780871C4C87100039901B /* 注册界面 */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +463,7 @@
 				0437809D1C4E2D640039901B /* PKGoodProductsViewController.h */,
 				0437809E1C4E2D640039901B /* PKGoodProductsViewController.m */,
 				0428513E1C50D58E002705D0 /* cell */,
+				042851451C51CC80002705D0 /* 良品详情 */,
 			);
 			name = "良品";
 			sourceTree = "<group>";
@@ -1047,6 +1060,7 @@
 				047054221C4744130041AE4D /* MJRefreshBackNormalFooter.m in Sources */,
 				0470543A1C4744130041AE4D /* SDWebImageDownloader.m in Sources */,
 				047054291C4744130041AE4D /* MJChiBaoZiHeader.m in Sources */,
+				0428514B1C51CE51002705D0 /* PKGoodProductsInfoController.m in Sources */,
 				047054151C4744130041AE4D /* MASViewConstraint.m in Sources */,
 				043780F21C4F78740039901B /* NSArray+PKFragmentCellHeight.m in Sources */,
 				047053FD1C4744130041AE4D /* PKBaseViewController.m in Sources */,

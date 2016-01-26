@@ -11,7 +11,7 @@
 #import "MJChiBaoZiHeader.h"
 #import "MJChiBaoZiFooter2.h"
 #import "MJRefresh.h"
-
+#import "PKGoodProductsInfoController.h"
 static NSString *identigier = @"cell";
 
 @interface PKGoodProductsViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -25,7 +25,7 @@ static NSString *identigier = @"cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    //self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
     self.goodProductTableView = [[UITableView alloc]initWithFrame:self.view.frame style:(UITableViewStylePlain)];
     _goodProductTableView.delegate = self;
@@ -36,6 +36,7 @@ static NSString *identigier = @"cell";
     [self.view addSubview:self.goodProductTableView];
     [self addRefreshControl];
     [self reloadGoodPraductsData:0];
+    [self navigationItemAction];
 
 }
 - (void)addRefreshControl{
@@ -144,6 +145,29 @@ static NSString *identigier = @"cell";
 - (void)loadNewData{
     [self reloadGoodPraductsData:0];
 }
+
+//选择后页面跳转
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    PKGoodProductsInfoController *info = [[PKGoodProductsInfoController alloc]init];
+    
+    info.contentID = [self.goodProductArray[indexPath.row] valueForKey:@"contentid"];
+    
+    [self.navigationController pushViewController:info animated:YES];
+}
+
+-(void)navigationItemAction{
+    
+    UIBarButtonItem *leftBtn1 = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"菜单"] style:(UIBarButtonItemStyleDone) target:self action:@selector(leftBtnAction)];
+    
+    self.navigationItem.leftBarButtonItem = leftBtn1;
+}
+-(void)leftBtnAction{
+    
+    [self.sideMenuViewController presentLeftMenuViewController];
+    
+}
+
 
 
 - (void)didReceiveMemoryWarning {

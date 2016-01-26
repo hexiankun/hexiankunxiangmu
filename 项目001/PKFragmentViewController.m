@@ -125,12 +125,15 @@
 }
 
 - (void)leftAction1:(id)sender {
-    PKLeftMenuViewController *baseVC = [[PKLeftMenuViewController alloc]init];
-    
-    [self presentViewController:baseVC animated:YES completion:nil];
-    
+//    PKLeftMenuViewController *baseVC = [[PKLeftMenuViewController alloc]init];
+//    
+//    [self presentViewController:baseVC animated:YES completion:nil];
+    [self.sideMenuViewController presentLeftMenuViewController];
+
 }
 - (void)leftAction2:(id)sender {
+    
+    [self.sideMenuViewController presentLeftMenuViewController];
     
 }
 

@@ -37,8 +37,78 @@
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    [self addLaunchingImage];
     return YES;
 }
+
+//- (void)addLaunchingImage{
+//    UIImageView *launchingImage = [[UIImageView alloc]initWithFrame:self.window.frame];
+//
+//    launchingImage.image = [UIImage imageNamed:@"LaunchImage"];
+//    //launchingImage.backgroundColor = [UIColor redColor];
+//    [self.window addSubview:launchingImage];
+//    __block CGRect launchingImageRect = launchingImage.bounds;
+//    
+//    [UIView animateWithDuration:3 animations:^{
+//        //让launchingImage的frame变大
+//        launchingImageRect = CGRectMake(-40, -40, VIEW_WIDTH + 80, VIEW_HEIGHT + 80);
+//        //将新的frame赋值给launchingImage
+//        launchingImage.frame = launchingImageRect;
+//    } completion:^(BOOL finished) {
+//        //判断动画是否执行完成
+//        if (finished) {
+//            //如果执行完成就将透明度设置成0，使其缓慢消失
+//            [UIView animateWithDuration:1 animations:^{
+//                launchingImage.alpha = 0;
+//            } completion:^(BOOL finished) {
+//                if (finished) {
+//                    //动画执行完成后将其移除
+//                    [launchingImage removeFromSuperview];
+//                }
+//            }];
+//        }
+//    }];
+//}
+
+
+- (void)addLaunchingImage{
+    
+    UIImageView *launchingImage = [[UIImageView alloc]initWithFrame:self.window.frame];
+    launchingImage.image = [UIImage imageNamed:@"LaunchImage"];
+    [self.window addSubview:launchingImage];
+     __block CGRect launchingImageRect = launchingImage.bounds;
+    
+    [UIView animateWithDuration:3 animations:^{
+        launchingImageRect = CGRectMake(-40, -40, VIEW_WIDTH+80, VIEW_HEIGHT+80);
+        launchingImage.frame = launchingImageRect;
+        
+        
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [UIView animateWithDuration:1 animations:^{
+                launchingImage.alpha = 0;
+ 
+                
+                
+            } completion:^(BOOL finished) {
+                if (finished) {
+                    [launchingImage removeFromSuperview];
+                }
+                
+            }];
+            
+            
+        }
+        
+        
+        
+    }];
+    
+    
+    
+    
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
